@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opa, qual filme?</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <header>
+        <h1>Opa, qual filme?</h1>
+        <p>Encontre o filme ou série perfeito com base nas suas preferências.</p>
+    </header>
+    
+    <section id="preferences">
+        <h2>Escolha suas preferências</h2>
+        
+        <label for="type">Tipo (Filme ou Série):</label>
+        <select id="type">
+            <option value="filme">Filme</option>
+            <option value="serie">Série</option>
+        </select>
+
+        <label for="genre">Gênero:</label>
+        <select id="genre">
+            <option value="nao-sei">Não sei</option>
+            <option value="comedia">Comédia</option>
+            <option value="acao">Ação</option>
+            <option value="drama">Drama</option>
+            <option value="romance">Romance</option>
+            <option value="terror">Terror</option>
+            <option value="ficcao">Ficção científica</option>
+        </select>
+
+        <label for="subgenre">Subgênero (opcional):</label>
+        <select id="subgenre">
+            <option value="">Escolha um subgênero</option>
+            <option value="comedia-romantica">Comédia Romântica</option>
+            <option value="ficcao-historica">Ficção Histórica</option>
+            <option value="suspense">Suspense</option>
+            <option value="drama-musical">Drama Musical</option>
+            <option value="ficcao-apocaliptica">Ficção Apocalíptica</option>
+            <option value="aventura">Aventura</option>
+            <option value="mistério">Mistério</option>
+        </select>
+
+        <label for="mood">Modo (ex: leve, emocionante, etc.):</label>
+        <input type="text" id="mood" placeholder="Como está seu humor?">
+
+        <label for="year">Ano de lançamento (opcional):</label>
+        <input type="number" id="year" placeholder="Ex: 2020">
+
+        <label for="quality">Qualidade (opcional):</label>
+        <input type="text" id="quality" placeholder="Ex: Alta, Boa, OK">
+
+        <button onclick="recommendMovies()">Recomendar Filmes</button>
+    </section>
+
+    <!-- Modal para exibição das recomendações -->
+    <div id="recommendation-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h2>Recomendações</h2>
+            <div id="movies-list"></div>
+        </div>
+    </div>
+
+    <script src="/javascript/index.js"></script>
+</body>
+</html>
